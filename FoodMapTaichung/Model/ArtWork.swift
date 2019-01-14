@@ -9,12 +9,7 @@
 import MapKit
 import Contacts
 
-class Artworks {
-    var artworks: [Artwork] = []
-    var showBool = false
-}
-
-class Artwork: NSObject, MKAnnotation {
+class CustomAnnotation: NSObject, MKAnnotation {
     let title: String?
     let locationName: String
     let phone: String
@@ -42,7 +37,7 @@ class Artwork: NSObject, MKAnnotation {
     }
 }
 
-struct storeNameAndDistance {
+struct StoreNameAndDistance {
     
     let title: String?
     let distance: String

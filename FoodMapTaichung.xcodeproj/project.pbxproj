@@ -16,17 +16,18 @@
 		B93996972113D368005BE52F /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93996962113D368005BE52F /* FoodViewController.swift */; };
 		B93996992115616D005BE52F /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93996982115616D005BE52F /* FoodTableViewCell.swift */; };
 		B939969B21159458005BE52F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B939969A21159458005BE52F /* DetailViewController.swift */; };
+		B943F1AD21EC0F000019538C /* FoodViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B943F1AC21EC0F000019538C /* FoodViewController + Extension.swift */; };
+		B943F1AF21EC0F4E0019538C /* DetailViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B943F1AE21EC0F4D0019538C /* DetailViewController + Extension.swift */; };
 		B952E567212175C600C1AA97 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B952E566212175C600C1AA97 /* Category.swift */; };
 		B964C565216AD7E100DEAC9D /* Merci Heart Brush.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B964C564216AD7E100DEAC9D /* Merci Heart Brush.ttf */; };
 		B984BFAD2176C344001D6E50 /* font.otf in Resources */ = {isa = PBXBuildFile; fileRef = B984BFAC2176C344001D6E50 /* font.otf */; };
-		B9968F722111F0D300D8F116 /* ViewController + MapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9968F712111F0D300D8F116 /* ViewController + MapViewDelegate.swift */; };
+		B9968F722111F0D300D8F116 /* ViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9968F712111F0D300D8F116 /* ViewController + Extension.swift */; };
 		B9968F742112EB7000D8F116 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9968F732112EB7000D8F116 /* CustomTabBarController.swift */; };
 		B998490E2124159800FB3E18 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B998490D2124159800FB3E18 /* WebViewController.swift */; };
 		B9A2BEDB21E7988E00F54261 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A2BEDA21E7988E00F54261 /* Service.swift */; };
 		B9A5EC562126594E009D6DD8 /* CategoryTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A5EC552126594E009D6DD8 /* CategoryTableController.swift */; };
 		B9A5EC582126700B009D6DD8 /* CategoryTableCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A5EC572126700B009D6DD8 /* CategoryTableCellTableViewCell.swift */; };
 		B9A5EC5C2132A61A009D6DD8 /* DetailVIewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A5EC5B2132A61A009D6DD8 /* DetailVIewCell.swift */; };
-		B9B20FC1218AE8EC0011DC5B /* taichungfood.json in Resources */ = {isa = PBXBuildFile; fileRef = B9B20FC0218AE8EC0011DC5B /* taichungfood.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,17 +42,18 @@
 		B93996962113D368005BE52F /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		B93996982115616D005BE52F /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		B939969A21159458005BE52F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B943F1AC21EC0F000019538C /* FoodViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodViewController + Extension.swift"; sourceTree = "<group>"; };
+		B943F1AE21EC0F4D0019538C /* DetailViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailViewController + Extension.swift"; sourceTree = "<group>"; };
 		B952E566212175C600C1AA97 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		B964C564216AD7E100DEAC9D /* Merci Heart Brush.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merci Heart Brush.ttf"; sourceTree = "<group>"; };
 		B984BFAC2176C344001D6E50 /* font.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = font.otf; sourceTree = "<group>"; };
-		B9968F712111F0D300D8F116 /* ViewController + MapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + MapViewDelegate.swift"; sourceTree = "<group>"; };
+		B9968F712111F0D300D8F116 /* ViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + Extension.swift"; sourceTree = "<group>"; };
 		B9968F732112EB7000D8F116 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		B998490D2124159800FB3E18 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		B9A2BEDA21E7988E00F54261 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		B9A5EC552126594E009D6DD8 /* CategoryTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableController.swift; sourceTree = "<group>"; };
 		B9A5EC572126700B009D6DD8 /* CategoryTableCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableCellTableViewCell.swift; sourceTree = "<group>"; };
 		B9A5EC5B2132A61A009D6DD8 /* DetailVIewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVIewCell.swift; sourceTree = "<group>"; };
-		B9B20FC0218AE8EC0011DC5B /* taichungfood.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = taichungfood.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,13 +72,6 @@
 			children = (
 				B9011F34210EA0F300098727 /* FoodMapTaichung */,
 				B9011F33210EA0F300098727 /* Products */,
-				B984BFAC2176C344001D6E50 /* font.otf */,
-				B964C564216AD7E100DEAC9D /* Merci Heart Brush.ttf */,
-				B9011F39210EA0F400098727 /* Main.storyboard */,
-				B9011F3C210EA0F500098727 /* Assets.xcassets */,
-				B9011F35210EA0F400098727 /* AppDelegate.swift */,
-				B9011F3E210EA0F500098727 /* LaunchScreen.storyboard */,
-				B9B20FC0218AE8EC0011DC5B /* taichungfood.json */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,37 +86,61 @@
 		B9011F34210EA0F300098727 /* FoodMapTaichung */ = {
 			isa = PBXGroup;
 			children = (
-				B9968F732112EB7000D8F116 /* CustomTabBarController.swift */,
-				B9011F37210EA0F400098727 /* ViewController.swift */,
-				B9968F712111F0D300D8F116 /* ViewController + MapViewDelegate.swift */,
-				B998490D2124159800FB3E18 /* WebViewController.swift */,
-				B9A2BEDA21E7988E00F54261 /* Service.swift */,
-				B9011F41210EA0F500098727 /* Info.plist */,
+				B943F1AA21EC0D870019538C /* Service */,
+				B943F1A821EC0C750019538C /* Controller */,
+				B943F1A921EC0CB70019538C /* View */,
 				B9A5EC5A212EF999009D6DD8 /* Model */,
-				B9A5EC59212EF96D009D6DD8 /* CategoryTableController */,
-				B998490C2124148F00FB3E18 /* FoodViewController+Detail */,
+				B9011F39210EA0F400098727 /* Main.storyboard */,
+				B9011F41210EA0F500098727 /* Info.plist */,
+				B9011F35210EA0F400098727 /* AppDelegate.swift */,
+				B9011F3E210EA0F500098727 /* LaunchScreen.storyboard */,
+				B9011F3C210EA0F500098727 /* Assets.xcassets */,
+				B943F1AB21EC0DFA0019538C /* font */,
 			);
 			path = FoodMapTaichung;
 			sourceTree = "<group>";
 		};
-		B998490C2124148F00FB3E18 /* FoodViewController+Detail */ = {
+		B943F1A821EC0C750019538C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B9968F732112EB7000D8F116 /* CustomTabBarController.swift */,
+				B9011F37210EA0F400098727 /* ViewController.swift */,
+				B9968F712111F0D300D8F116 /* ViewController + Extension.swift */,
 				B93996962113D368005BE52F /* FoodViewController.swift */,
-				B93996982115616D005BE52F /* FoodTableViewCell.swift */,
+				B943F1AC21EC0F000019538C /* FoodViewController + Extension.swift */,
 				B939969A21159458005BE52F /* DetailViewController.swift */,
-				B9A5EC5B2132A61A009D6DD8 /* DetailVIewCell.swift */,
+				B943F1AE21EC0F4D0019538C /* DetailViewController + Extension.swift */,
+				B9A5EC552126594E009D6DD8 /* CategoryTableController.swift */,
+				B998490D2124159800FB3E18 /* WebViewController.swift */,
 			);
-			path = "FoodViewController+Detail";
+			path = Controller;
 			sourceTree = "<group>";
 		};
-		B9A5EC59212EF96D009D6DD8 /* CategoryTableController */ = {
+		B943F1A921EC0CB70019538C /* View */ = {
 			isa = PBXGroup;
 			children = (
 				B9A5EC572126700B009D6DD8 /* CategoryTableCellTableViewCell.swift */,
-				B9A5EC552126594E009D6DD8 /* CategoryTableController.swift */,
+				B9A5EC5B2132A61A009D6DD8 /* DetailVIewCell.swift */,
+				B93996982115616D005BE52F /* FoodTableViewCell.swift */,
 			);
-			path = CategoryTableController;
+			path = View;
+			sourceTree = "<group>";
+		};
+		B943F1AA21EC0D870019538C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B9A2BEDA21E7988E00F54261 /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B943F1AB21EC0DFA0019538C /* font */ = {
+			isa = PBXGroup;
+			children = (
+				B984BFAC2176C344001D6E50 /* font.otf */,
+				B964C564216AD7E100DEAC9D /* Merci Heart Brush.ttf */,
+			);
+			path = font;
 			sourceTree = "<group>";
 		};
 		B9A5EC5A212EF999009D6DD8 /* Model */ = {
@@ -196,7 +215,6 @@
 				B9011F40210EA0F500098727 /* LaunchScreen.storyboard in Resources */,
 				B964C565216AD7E100DEAC9D /* Merci Heart Brush.ttf in Resources */,
 				B9011F3D210EA0F500098727 /* Assets.xcassets in Resources */,
-				B9B20FC1218AE8EC0011DC5B /* taichungfood.json in Resources */,
 				B9011F3B210EA0F400098727 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,7 +236,9 @@
 				B9A5EC562126594E009D6DD8 /* CategoryTableController.swift in Sources */,
 				B9A5EC5C2132A61A009D6DD8 /* DetailVIewCell.swift in Sources */,
 				B952E567212175C600C1AA97 /* Category.swift in Sources */,
-				B9968F722111F0D300D8F116 /* ViewController + MapViewDelegate.swift in Sources */,
+				B943F1AD21EC0F000019538C /* FoodViewController + Extension.swift in Sources */,
+				B943F1AF21EC0F4E0019538C /* DetailViewController + Extension.swift in Sources */,
+				B9968F722111F0D300D8F116 /* ViewController + Extension.swift in Sources */,
 				B93996992115616D005BE52F /* FoodTableViewCell.swift in Sources */,
 				B9011F36210EA0F400098727 /* AppDelegate.swift in Sources */,
 				B93996972113D368005BE52F /* FoodViewController.swift in Sources */,

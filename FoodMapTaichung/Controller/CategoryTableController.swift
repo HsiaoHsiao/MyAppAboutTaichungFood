@@ -13,7 +13,7 @@ import MapKit
 protocol setAnnotationDelegate: class {
     func addAnnotation(_ food: Food)
     func removeAnnotation(_ food: Food)
-    func setFoodInformation() -> [storeNameAndDistance]
+    func setFoodInformation() -> [StoreNameAndDistance]
 }
 
 class CategoryTableController: UITableViewController {

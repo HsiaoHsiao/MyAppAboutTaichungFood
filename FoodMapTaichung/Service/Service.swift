@@ -19,7 +19,7 @@ class Service {
     let foodViewController = FoodViewController()
     
     var foodCategory: Category?
-    var foodAndDistance = [storeNameAndDistance]()
+    var foodAndDistance = [StoreNameAndDistance]()
     var food: Food?
     
     func getData() {

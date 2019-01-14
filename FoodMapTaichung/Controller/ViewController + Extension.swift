@@ -15,7 +15,7 @@ extension ViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         
-        let annotation = view.annotation as! Artwork
+        let annotation = view.annotation as! CustomAnnotation
         
         Service.sharedInstance.calculateRoute(myLocation: mapView.userLocation.coordinate, destination: annotation.coordinate, map: self.mapView, timeLabel: timeLabel, request: request)
         
@@ -46,7 +46,7 @@ extension ViewController: MKMapViewDelegate {
     // Set Annotations View
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
-        guard let annotation = annotation as? Artwork else { return nil }
+        guard let annotation = annotation as? CustomAnnotation else { return nil }
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "maker")
         annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "maker")
         annotationView?.image = UIImage(named: annotation.category)
@@ -60,7 +60,7 @@ extension ViewController: MKMapViewDelegate {
     // Set AnnotationView Activite
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         
-        let location = view.annotation as! Artwork
+        let location = view.annotation as! CustomAnnotation
         let alerk = UIAlertController(title: "選擇導航方式", message: "", preferredStyle: .alert)
         let action1 = UIAlertAction(title: "步行距離", style: .default) { (_) in
             self.request.transportType = .walking
@@ -113,6 +113,48 @@ extension ViewController: CLLocationManagerDelegate {
         let region = MKCoordinateRegion.init(center: coordinate, span: span)
         
         mapView.setRegion(region, animated: true)
+    }
+    
+}
+
+extension ViewController: setAnnotationDelegate {
+    
+    func addAnnotation(_ food: Food) {
+        let latitude = Double(food.latitude)
+        let longitude = Double(food.longitude)
+        let coordinate = CLLocationCoordinate2DMake(latitude!, longitude!)
+        let foodArtwork = CustomAnnotation(food.name, food.address, food.phone, coordinate, food.category, food.category)
+        
+        mapView.addAnnotation(foodArtwork)
+        mapView.layoutIfNeeded()
+    }
+    
+    func removeAnnotation(_ food: Food) {
+        for annotation in mapView.annotations {
+            if annotation.title == food.name {
+                mapView.removeAnnotation(annotation)
+            }
+        }
+    }
+    
+    func setFoodInformation() -> [StoreNameAndDistance] {
+        var stores = [StoreNameAndDistance]()
+        
+        for (index, _) in self.mapView.annotations.enumerated() {
+            let location = CLLocation(latitude: mapView.annotations[index].coordinate.latitude,
+                                      longitude: mapView.annotations[index].coordinate.longitude)
+            
+            let mylocation = CLLocation(latitude: self.myLocation!.coordinate.latitude, longitude: self.myLocation!.coordinate.longitude)
+            let distance = mylocation.distance(from: location)
+            let distanceStr = String(format: "%.2f", Double(distance / 1000))
+            stores.append(StoreNameAndDistance(mapView.annotations[index].title!, distanceStr))
+        }
+        stores.sort(by: { $0.distance < $1.distance})
+        
+        if stores.count > 0 {
+            stores.remove(at: 0)
+        }
+        return stores
     }
     
 }

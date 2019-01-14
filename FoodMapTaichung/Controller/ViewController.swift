@@ -63,8 +63,7 @@ class ViewController: UIViewController {
     lazy var barLabel: UILabel = {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: (self.navigationController?.navigationBar.frame.width)!, height: (self.navigationController?.navigationBar.frame.height)!))
         
-        label.attributedText = NSMutableAttributedString(string: "Food  Map  in  Taichung",
-                                                         attributes: [NSAttributedString.Key.font:UIFont.init(name: "Merci Heart Brush", size: 20)!])
+        label.attributedText = NSMutableAttributedString(string: "Food  Map  in  Taichung", attributes: [NSAttributedString.Key.font:UIFont.init(name: "Merci Heart Brush", size: 20)!])
         label.textAlignment = .center
         
         return label
@@ -145,44 +144,3 @@ class ViewController: UIViewController {
     
 } //end ViewController
 
-extension ViewController: setAnnotationDelegate {
-    
-    func addAnnotation(_ food: Food) {
-        let latitude = Double(food.latitude)
-        let longitude = Double(food.longitude)
-        let coordinate = CLLocationCoordinate2DMake(latitude!, longitude!)
-        let foodArtwork = Artwork(food.name, food.address, food.phone, coordinate, food.category, food.category)
-        
-        mapView.addAnnotation(foodArtwork)
-        mapView.layoutIfNeeded()
-    }
-    
-    func removeAnnotation(_ food: Food) {
-        for annotation in mapView.annotations {
-            if annotation.title == food.name {
-                mapView.removeAnnotation(annotation)
-            }
-        }
-    }
-    
-    func setFoodInformation() -> [storeNameAndDistance] {
-        var stores = [storeNameAndDistance]()
-        
-        for (index, _) in self.mapView.annotations.enumerated() {
-            let location = CLLocation(latitude: mapView.annotations[index].coordinate.latitude,
-                                      longitude: mapView.annotations[index].coordinate.longitude)
-            
-            let mylocation = CLLocation(latitude: self.myLocation!.coordinate.latitude, longitude: self.myLocation!.coordinate.longitude)
-            let distance = mylocation.distance(from: location)
-            let distanceStr = String(format: "%.2f", Double(distance / 1000))
-            stores.append(storeNameAndDistance(mapView.annotations[index].title!, distanceStr))
-        }
-        stores.sort(by: { $0.distance < $1.distance})
-        
-        if stores.count > 0 {
-            stores.remove(at: 0)
-        }
-        return stores
-    }
-    
-}
