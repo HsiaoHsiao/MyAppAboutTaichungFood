@@ -23,8 +23,8 @@ class Service {
     var food: Food?
     
     func getData() {
-        let urlString = "https://hsiaohsiao.github.io/TaichungFoodMap/taichungfood.json"
-        guard let url = URL(string: urlString) else { return }
+        let path = Bundle.main.path(forResource: "taichungfood", ofType: "json")
+        let url = URL(fileURLWithPath: path!)
         
         URLSession.shared.dataTask(with: url) { (data, respon, err) in
             guard let data = data else { return }
@@ -36,6 +36,7 @@ class Service {
             }
             }.resume()
     }
+    
     
     func calculateRoute(myLocation: CLLocationCoordinate2D, destination: CLLocationCoordinate2D, map: MKMapView, timeLabel: UILabel, request: MKDirections.Request) {
         
@@ -57,7 +58,7 @@ class Service {
             UIView.animate(withDuration: 0) {
                 map.addOverlay(route.polyline)
             }
-        
+            
             if request.transportType == .walking {
                 let attributed =
                     NSMutableAttributedString(string: "步行：\(distance)公里（大約\(time)分鐘）",

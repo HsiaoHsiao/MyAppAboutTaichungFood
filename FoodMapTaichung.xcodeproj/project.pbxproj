@@ -28,7 +28,19 @@
 		B9A5EC562126594E009D6DD8 /* CategoryTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A5EC552126594E009D6DD8 /* CategoryTableController.swift */; };
 		B9A5EC582126700B009D6DD8 /* CategoryTableCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A5EC572126700B009D6DD8 /* CategoryTableCellTableViewCell.swift */; };
 		B9A5EC5C2132A61A009D6DD8 /* DetailVIewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A5EC5B2132A61A009D6DD8 /* DetailVIewCell.swift */; };
+		B9DC62F521EF966C00B0692E /* FoodMapTaichungUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC62F421EF966C00B0692E /* FoodMapTaichungUITests.swift */; };
+		B9DC62FD21EFA37400B0692E /* taichungfood.json in Resources */ = {isa = PBXBuildFile; fileRef = B9DC62FC21EFA37400B0692E /* taichungfood.json */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B9DC62F721EF966C00B0692E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9011F2A210EA0F300098727 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9011F31210EA0F300098727;
+			remoteInfo = FoodMapTaichung;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B9011F32210EA0F300098727 /* FoodMapTaichung.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodMapTaichung.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,10 +66,21 @@
 		B9A5EC552126594E009D6DD8 /* CategoryTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableController.swift; sourceTree = "<group>"; };
 		B9A5EC572126700B009D6DD8 /* CategoryTableCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableCellTableViewCell.swift; sourceTree = "<group>"; };
 		B9A5EC5B2132A61A009D6DD8 /* DetailVIewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVIewCell.swift; sourceTree = "<group>"; };
+		B9DC62F221EF966C00B0692E /* FoodMapTaichungUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodMapTaichungUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9DC62F421EF966C00B0692E /* FoodMapTaichungUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodMapTaichungUITests.swift; sourceTree = "<group>"; };
+		B9DC62F621EF966C00B0692E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9DC62FC21EFA37400B0692E /* taichungfood.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = taichungfood.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B9011F2F210EA0F300098727 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9DC62EF21EF966C00B0692E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -71,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				B9011F34210EA0F300098727 /* FoodMapTaichung */,
+				B9DC62F321EF966C00B0692E /* FoodMapTaichungUITests */,
 				B9011F33210EA0F300098727 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				B9011F32210EA0F300098727 /* FoodMapTaichung.app */,
+				B9DC62F221EF966C00B0692E /* FoodMapTaichungUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +119,7 @@
 				B9011F41210EA0F500098727 /* Info.plist */,
 				B9011F35210EA0F400098727 /* AppDelegate.swift */,
 				B9011F3E210EA0F500098727 /* LaunchScreen.storyboard */,
+				B9DC62FC21EFA37400B0692E /* taichungfood.json */,
 				B9011F3C210EA0F500098727 /* Assets.xcassets */,
 				B943F1AB21EC0DFA0019538C /* font */,
 			);
@@ -152,6 +178,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		B9DC62F321EF966C00B0692E /* FoodMapTaichungUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B9DC62F421EF966C00B0692E /* FoodMapTaichungUITests.swift */,
+				B9DC62F621EF966C00B0692E /* Info.plist */,
+			);
+			path = FoodMapTaichungUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -172,19 +207,41 @@
 			productReference = B9011F32210EA0F300098727 /* FoodMapTaichung.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B9DC62F121EF966C00B0692E /* FoodMapTaichungUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9DC62FB21EF966C00B0692E /* Build configuration list for PBXNativeTarget "FoodMapTaichungUITests" */;
+			buildPhases = (
+				B9DC62EE21EF966C00B0692E /* Sources */,
+				B9DC62EF21EF966C00B0692E /* Frameworks */,
+				B9DC62F021EF966C00B0692E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9DC62F821EF966C00B0692E /* PBXTargetDependency */,
+			);
+			name = FoodMapTaichungUITests;
+			productName = FoodMapTaichungUITests;
+			productReference = B9DC62F221EF966C00B0692E /* FoodMapTaichungUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		B9011F2A210EA0F300098727 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "蕭偉志";
 				TargetAttributes = {
 					B9011F31210EA0F300098727 = {
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 1000;
+					};
+					B9DC62F121EF966C00B0692E = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B9011F31210EA0F300098727;
 					};
 				};
 			};
@@ -202,6 +259,7 @@
 			projectRoot = "";
 			targets = (
 				B9011F31210EA0F300098727 /* FoodMapTaichung */,
+				B9DC62F121EF966C00B0692E /* FoodMapTaichungUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -215,7 +273,15 @@
 				B9011F40210EA0F500098727 /* LaunchScreen.storyboard in Resources */,
 				B964C565216AD7E100DEAC9D /* Merci Heart Brush.ttf in Resources */,
 				B9011F3D210EA0F500098727 /* Assets.xcassets in Resources */,
+				B9DC62FD21EFA37400B0692E /* taichungfood.json in Resources */,
 				B9011F3B210EA0F400098727 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9DC62F021EF966C00B0692E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,7 +311,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B9DC62EE21EF966C00B0692E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9DC62F521EF966C00B0692E /* FoodMapTaichungUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B9DC62F821EF966C00B0692E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9011F31210EA0F300098727 /* FoodMapTaichung */;
+			targetProxy = B9DC62F721EF966C00B0692E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B9011F39210EA0F400098727 /* Main.storyboard */ = {
@@ -423,6 +505,49 @@
 			};
 			name = Release;
 		};
+		B9DC62F921EF966C00B0692E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SC74JVKNVT;
+				INFOPLIST_FILE = FoodMapTaichungUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "Hsiao-wei-chih.FoodMapTaichungUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FoodMapTaichung;
+			};
+			name = Debug;
+		};
+		B9DC62FA21EF966C00B0692E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SC74JVKNVT;
+				INFOPLIST_FILE = FoodMapTaichungUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "Hsiao-wei-chih.FoodMapTaichungUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FoodMapTaichung;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -440,6 +565,15 @@
 			buildConfigurations = (
 				B9011F45210EA0F500098727 /* Debug */,
 				B9011F46210EA0F500098727 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9DC62FB21EF966C00B0692E /* Build configuration list for PBXNativeTarget "FoodMapTaichungUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9DC62F921EF966C00B0692E /* Debug */,
+				B9DC62FA21EF966C00B0692E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
