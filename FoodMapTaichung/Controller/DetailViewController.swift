@@ -112,10 +112,13 @@ class DetailViewController: UIViewController {
     }
     
     @objc func openGPS() {
-        let location2 = MKMapItem(placemark: MKPlacemark(coordinate: mapView.annotations[0].coordinate))
-        location2.name = mapView.annotations[0].title!
+        
+        var location: MKMapItem? = MKMapItem(placemark: MKPlacemark(coordinate: self.location! ))
+        location!.name = mapView.annotations[0].title!
         let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
-        location2.openInMaps(launchOptions: launchOptions)
+        location!.openInMaps(launchOptions: launchOptions)
+        
+        location = nil
     }
     
     @objc func connectUrl() {
