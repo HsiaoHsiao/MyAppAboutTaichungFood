@@ -140,6 +140,8 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         barLabel.alpha = 1
+        locationManager.startUpdatingLocation()
+
     }
     
 } //end ViewController

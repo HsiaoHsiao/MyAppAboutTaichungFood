@@ -37,6 +37,8 @@ extension ViewController: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        guard mapView.overlays.count > 0 else { return }
+        
         UIView.animate(withDuration: 0.5) {
             self.detailView.alpha = 0
             mapView.removeOverlay(mapView.overlays[0])
@@ -109,10 +111,13 @@ extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         myLocation = locations.first!
         let coordinate: CLLocationCoordinate2D = CLLocationCoordinate2DMake((myLocation?.coordinate.latitude)!,  myLocation!.coordinate.longitude)
-        let span = MKCoordinateSpan.init(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        let span = MKCoordinateSpan.init(latitudeDelta: 0.08, longitudeDelta: 0.08)
         let region = MKCoordinateRegion.init(center: coordinate, span: span)
         
         mapView.setRegion(region, animated: true)
+        
+        locationManager.stopUpdatingLocation()
+        
     }
     
 }
